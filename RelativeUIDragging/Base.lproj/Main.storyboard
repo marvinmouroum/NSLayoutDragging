@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RelativeUIDragging" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach" translatesAutoresizingMaskIntoConstraints="NO" id="rim-P7-H3E" userLabel="BackgroundImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash_background" translatesAutoresizingMaskIntoConstraints="NO" id="SS1-cF-bwe" userLabel="trash_background">
+                                <rect key="frame" x="248.5" y="677.5" width="165.5" height="218.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash_foreground" translatesAutoresizingMaskIntoConstraints="NO" id="4nP-cB-S4o" userLabel="trash_forground">
+                                <rect key="frame" x="248.5" y="677.5" width="165.5" height="218.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4nP-cB-S4o" secondAttribute="height" multiplier="166:219" id="cHB-0W-QXV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4nP-cB-S4o" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8My-uq-w4h"/>
+                            <constraint firstAttribute="bottom" secondItem="rim-P7-H3E" secondAttribute="bottom" id="BYm-Vh-auc"/>
+                            <constraint firstItem="SS1-cF-bwe" firstAttribute="trailing" secondItem="4nP-cB-S4o" secondAttribute="trailing" id="ME0-2X-FdU"/>
+                            <constraint firstItem="rim-P7-H3E" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QQV-7Z-33h"/>
+                            <constraint firstItem="SS1-cF-bwe" firstAttribute="height" secondItem="4nP-cB-S4o" secondAttribute="height" id="RT5-VJ-m19"/>
+                            <constraint firstItem="rim-P7-H3E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ub0-yC-48I"/>
+                            <constraint firstAttribute="bottom" secondItem="4nP-cB-S4o" secondAttribute="bottom" id="bAt-8d-rQb"/>
+                            <constraint firstItem="rim-P7-H3E" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ciK-iB-YGL"/>
+                            <constraint firstItem="SS1-cF-bwe" firstAttribute="top" secondItem="4nP-cB-S4o" secondAttribute="top" id="dNe-q3-GlI"/>
+                            <constraint firstItem="4nP-cB-S4o" firstAttribute="width" secondItem="rim-P7-H3E" secondAttribute="width" multiplier="0.4" id="oFa-H3-p4G"/>
+                            <constraint firstItem="SS1-cF-bwe" firstAttribute="width" secondItem="4nP-cB-S4o" secondAttribute="width" id="qqB-yg-g5y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="trashCan" destination="4nP-cB-S4o" id="CpG-BM-TCh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="beach" width="1024" height="679"/>
+        <image name="trash_background" width="500" height="500"/>
+        <image name="trash_foreground" width="500" height="500"/>
+    </resources>
+</document>
